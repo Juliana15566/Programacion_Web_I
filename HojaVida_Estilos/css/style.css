@@ -1,0 +1,139 @@
+/* Reinicio básico */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Página */
+body{
+    font-family:'Quicksand', sans-serif;
+    background-color:#f5f7fa;
+    color:#333;
+    line-height:1.6;
+}
+
+/* Encabezado */
+.encabezado{
+    background-color:#2c3e50;
+    color:white;
+    text-align:center;
+    padding:1.5rem;
+}
+
+/* Menú */
+.menu{
+    display:flex;
+    justify-content:center;
+    gap:1rem;
+    list-style:none;
+    margin-top:1rem;
+}
+
+.menu a{
+    display:block;
+    text-decoration:none;
+    color:white;
+    background-color:#34495e;
+    padding:10px 18px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    background-color:#4a647d;
+}
+
+/* Contenedor principal */
+main{
+    display:flex;
+    gap:2rem;
+    width:90%;
+    margin:2rem auto;
+}
+
+/* Columna izquierda */
+.contenido{
+    flex:2;
+}
+
+/* Tarjetas */
+.tarjeta{
+    background-color:white;
+    padding:1.5rem;
+    margin-bottom:1.5rem;
+    border-radius:10px;
+    border:1px solid #dcdfe4;
+    box-shadow:0 2px 5px rgba(0,0,0,0.08);
+}
+
+/* Presentación */
+.perfil{
+    flex:1;
+    height:fit-content;
+}
+
+/* Títulos */
+h2,
+h3{
+    background-color:#34495e;
+    color:white;
+    padding:10px;
+    border-radius:8px;
+    margin-bottom:1rem;
+    box-shadow:0 2px 4px rgba(0,0,0,0.15);
+}
+
+/* Listas descriptivas */
+dt{
+    font-weight:bold;
+    color:#34495e;
+    margin-top:1rem;
+}
+
+dd{
+    margin-left:1rem;
+    margin-top:0.3rem;
+}
+
+/* Lista de gustos */
+aside ul{
+    padding-left:1.5rem;
+}
+
+aside li{
+    margin-bottom:0.5rem;
+}
+
+/* Footer */
+.pie{
+    background-color:#ecf0f1;
+    color:#555;
+    text-align:center;
+    padding:1.5rem;
+    border-top:1px solid #dcdfe4;
+}
+
+.pie a{
+    color:#2c3e50;
+    text-decoration:none;
+    margin:0 10px;
+}
+
+.pie a:hover{
+    text-decoration:underline;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    main{
+        flex-direction:column;
+    }
+
+    .menu{
+        flex-direction:column;
+        align-items:center;
+    }
+}

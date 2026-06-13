@@ -1,0 +1,234 @@
+/* =========================
+   RESET GENERAL
+   ========================= */
+*{
+    margin:0; /* elimina el margen por defecto de todos los elementos */
+    padding:0; /* elimina el relleno por defecto */
+    box-sizing:border-box; /* incluye padding y borde dentro del tamaño total */
+}
+
+/* =========================
+   ESTILO GENERAL
+   ========================= */
+body{
+    font-family:'Quicksand', sans-serif; /* define la tipografía de toda la página */
+    background:linear-gradient(135deg, #eef2ff, #e0f7fa); /* fondo con degradado diagonal */
+    color:#333; /* color general del texto */
+}
+
+/* título principal */
+.JuniorLab{
+    font-size: 3rem; /* aumenta el tamaño del texto */
+}
+
+/* =========================
+   NAV
+   ========================= */
+.nav{
+    display:flex; /* activa flexbox para organizar elementos */
+    justify-content:space-between; /* separa los elementos a los extremos */
+    align-items:center; /* centra los elementos verticalmente */
+    padding:1rem 6%; /* agrega espacio interno */
+    background:linear-gradient(135deg, #6366f1, #06b6d4); /* fondo con degradado */
+    color:#fff; /* texto en color blanco */
+    position: sticky; /* hace que el nav se quede fijo al hacer scroll */
+    top: 0; /* lo fija en la parte superior */
+    z-index: 1000; /* evita que otros elementos lo cubran */
+}
+
+/* logo */
+.marca{
+    display:flex; /* organiza los elementos en fila */
+    align-items:center; /* centra verticalmente */
+    gap:8px; /* espacio entre icono y texto */
+}
+
+/* menú */
+.menu{
+    display:flex; /* coloca los elementos en fila */
+    gap:1.5rem; /* espacio entre cada opción */
+    list-style:none; /* elimina los puntos de lista */
+}
+
+/* enlaces */
+.menu a{
+    text-decoration:none; /* elimina el subrayado */
+    color:#fff; /* color blanco */
+    transition:0.3s; /* suaviza los cambios visuales */
+}
+
+/* efecto hover */
+.menu a:hover{
+    opacity:0.7; /* hace el enlace ligeramente transparente al pasar el mouse */
+}
+
+/* botón */
+.btn{
+    background:#fff; /* fondo blanco */
+    color:#6366f1; /* color del texto */
+    border:none; /* elimina el borde */
+    padding:8px 15px; /* espacio interno */
+    border-radius:20px; /* bordes redondeados */
+    cursor:pointer; /* cambia el cursor a mano */
+    transition:0.3s; /* animación suave */
+}
+
+/* efecto hover botón */
+.btn:hover{
+    background:#06b6d4; /* cambia el color de fondo */
+    color:#fff; /* cambia el color del texto */
+}
+
+/* =========================
+   HERO
+   ========================= */
+.hero{
+    display:flex; /* divide la sección en columnas */
+    align-items:center; /* centra verticalmente */
+    justify-content:space-between; /* separa contenido */
+    padding:3rem 6%; /* espacio interno */
+}
+
+/* texto del hero */
+.texto-hero{
+    width:50%; /* ocupa la mitad del espacio */
+}
+
+/* imagen del hero */
+.img-hero{
+    display:flex; /* activa flexbox */
+    justify-content:center; /* centra el contenido */
+    width:50%; /* ocupa la otra mitad */
+}
+
+/* caja visual */
+.caja{
+    width:200px; /* ancho fijo */
+    height:200px; /* alto fijo */
+    background:linear-gradient(135deg, #6366f1, #06b6d4); /* degradado */
+    color:#fff; /* color del icono */
+    display:flex; /* centra contenido */
+    align-items:center; /* centra vertical */
+    justify-content:center; /* centra horizontal */
+    font-size:4rem; /* tamaño del icono */
+    border-radius:20px; /* bordes redondeados */
+    box-shadow:0 10px 25px rgba(0,0,0,0.2); /* sombra */
+}
+
+/* =========================
+   SECCIONES
+   ========================= */
+section{
+    padding:2rem 6%; /* espacio interno */
+}
+
+/* títulos */
+h2{
+    margin-top:2rem; /* espacio arriba */
+    margin-bottom:1rem; /* espacio abajo */
+}
+
+/* =========================
+   TARJETAS (FLIP)
+   ========================= */
+.tarjetas{
+    display:flex; /* organiza en fila */
+    gap:1.5rem; /* espacio entre tarjetas */
+    flex-wrap:wrap; /* permite bajar a otra línea */
+    justify-content:center; /* centra las tarjetas */
+    perspective:1000px; /* da profundidad para efecto 3D */
+}
+
+/* contenedor de tarjeta */
+.tarjeta{
+    width:220px; /* ancho fijo */
+    height:160px; /* alto fijo */
+    position:relative; /* permite posicionar elementos internos */
+    transform-style:preserve-3d; /* mantiene el efecto 3D */
+    transition:transform 0.6s; /* animación del giro */
+    cursor:pointer; /* cambia el cursor */
+}
+
+/* efecto giro */
+.tarjeta:hover{
+    transform:rotateY(180deg); /* rota la tarjeta */
+}
+
+/* caras de la tarjeta */
+.cara{
+    position:absolute; /* se posiciona sobre la otra cara */
+    width:100%; /* ocupa todo el ancho */
+    height:100%; /* ocupa todo el alto */
+    border-radius:15px; /* bordes redondeados */
+    display:flex; /* centra contenido */
+    flex-direction:column; /* organiza en columna */
+    align-items:center; /* centra horizontal */
+    justify-content:center; /* centra vertical */
+    gap:10px; /* espacio entre elementos */
+    text-align:center; /* centra texto */
+    padding:1rem; /* espacio interno */
+    backface-visibility:hidden; /* oculta la cara trasera cuando no se ve */
+}
+
+/* cara frontal */
+.frente{
+    background:linear-gradient(135deg, #6366f1, #8b5cf6); /* degradado */
+    color:#fff; /* texto blanco */
+}
+
+/* cara trasera */
+.atras{
+    background:#fff; /* fondo blanco */
+    color:#333; /* texto oscuro */
+    transform:rotateY(180deg); /* posición invertida */
+    box-shadow:0 5px 15px rgba(0,0,0,0.1); /* sombra */
+}
+
+/* =========================
+   PROYECTOS
+   ========================= */
+
+/* contenedor de proyectos */
+.tarjetas-proyectos{
+    display:flex; /* organiza en fila */
+    gap:1rem; /* espacio entre tarjetas */
+    flex-wrap:wrap; /* permite bajar */
+}
+
+/* tarjeta de proyecto */
+.tarjeta-proyecto{
+    background:#fff; /* fondo blanco */
+    padding:1rem; /* espacio interno */
+    border-radius:10px; /* bordes redondeados */
+    box-shadow:0 2px 8px rgba(0,0,0,0.1); /* sombra */
+    flex:1 1 200px; /* tamaño flexible */
+    transition:0.3s; /* animación */
+}
+
+/* efecto hover */
+.tarjeta-proyecto:hover{
+    transform:scale(1.05); /* crece ligeramente */
+}
+
+/* iconos */
+.tarjeta_icono{
+    font-size:2rem; /* tamaño del icono */
+}
+
+/* imagen */
+.cubo{
+    width:40px; /* ancho */
+    height:40px; /* alto */
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+.pie{
+    text-align:center; /* centra el texto */
+    padding:1rem; /* espacio interno */
+    background:linear-gradient(135deg, #6366f1, #06b6d4); /* fondo degradado */
+    color:#fff; /* texto blanco */
+    margin-top:2rem; /* separación superior */
+}
+
