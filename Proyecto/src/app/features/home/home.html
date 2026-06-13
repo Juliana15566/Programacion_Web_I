@@ -1,0 +1,29 @@
+<h2 class="mb-4">🔥 Películas populares</h2>
+
+@if (cargando) {
+  <app-spinner />
+}
+
+@if (error) {
+  <div class="alert alert-danger" role="alert">
+    {{ error }}
+    <button class="btn btn-outline-danger btn-sm ms-2" (click)="cargarPeliculas()">
+      Reintentar
+    </button>
+  </div>
+}
+
+@if (!cargando && !error) {
+  <div class="row g-4">
+    @for (movie of peliculas; track movie.id) {
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <app-movie-card
+          [movie]="movie"
+          [esFavorita]="esFavorita(movie.id)"
+          (toggleFavorito)="toggleFavorito($event)" />
+      </div>
+    } @empty {
+      <p class="text-muted">No se encontraron películas</p>
+    }
+  </div>
+}
